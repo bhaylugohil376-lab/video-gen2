@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Video Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">🎬 AI Video Studio</div>
+    <button id="themeToggle" class="theme-button">🌙 Night</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Create <span>AI Videos</span></h1>
+      <p>Turn your text prompt into an AI-generated video.</p>
+    </section>
+
+    <section class="card">
+      <label for="prompt">Video Prompt</label>
+      <textarea
+        id="prompt"
+        placeholder="Example: A cinematic drone shot flying over a beautiful Indian mountain village at sunrise, realistic lighting..."
+      ></textarea>
+
+      <div class="options">
+        <div>
+          <label for="aspectRatio">Aspect Ratio</label>
+          <select id="aspectRatio">
+            <option value="16:9">Landscape — 16:9</option>
+            <option value="9:16">Portrait — 9:16</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="quality">Quality</label>
+          <select id="quality">
+            <option value="standard">Standard</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="generateBtn">✨ Generate Real Video</button>
+
+      <div class="status" id="status"></div>
+
+      <div class="video-box" id="videoBox">
+        <video id="resultVideo" controls playsinline></video>
+      </div>
+
+      <div class="note">
+        🔐 Your API key is protected on the backend.
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
